@@ -34,7 +34,9 @@ export default function CircularTimer({ duration = 30 }) {
           cx="100"
           cy="100"
           fill={GREEN}
+          //   fillOpacity={0.4}
           stroke="#ddd"
+          // stroke="yellow"
           strokeWidth="30"
         />
         <circle

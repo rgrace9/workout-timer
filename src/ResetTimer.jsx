@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const RADIUS = 90;
+const RADIUS = 70;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 const GREEN = "#3ca846";
@@ -33,9 +33,11 @@ export default function CircularTimer({ duration = 30 }) {
           r={RADIUS}
           cx="100"
           cy="100"
-          fill={GREEN}
+          //   fill={GREEN}
+          fillOpacity={0.4}
           stroke="#ddd"
-          strokeWidth="20"
+          // stroke="yellow"
+          strokeWidth="30"
         />
         <circle
           r={RADIUS}
@@ -43,7 +45,7 @@ export default function CircularTimer({ duration = 30 }) {
           cy="100"
           fill="transparent"
           stroke="#00aaff"
-          strokeWidth="20"
+          strokeWidth="30"
           strokeDasharray={CIRCUMFERENCE}
           strokeDashoffset={CIRCUMFERENCE * (1 - progress)}
           transform="rotate(-90 100 100)"
@@ -51,9 +53,9 @@ export default function CircularTimer({ duration = 30 }) {
         />
         <text
           x="100"
-          y="110"
+          y="120"
           textAnchor="middle"
-          fontSize="32"
+          fontSize="56"
           fontWeight={700}
           fill="black"
           fontFamily="sans-serif"
